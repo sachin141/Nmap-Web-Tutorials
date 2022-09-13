@@ -1,0 +1,16 @@
+
+  image: atlassian/default-image:latest
+
+  pipelines:
+    default:
+      - parallel:
+        - step:
+            name: 'Run Semgrep scan with current branch'
+            deployment: test
+            image: returntocorp/semgrep
+            script:
+              # Set SEMGREP Variables
+              # - export SEMGREP_BASELINE_REF=""
+              - export SEMGREP_APP_TOKEN=$SEMGREP_APP_TOKEN
+              
+              - semgrep ci
