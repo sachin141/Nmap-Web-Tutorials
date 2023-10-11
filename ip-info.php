@@ -2,7 +2,7 @@
 <head></head>
 <body>
     <form method="post" action="">
-    IP Address/Host:<input type="text" name="ip_address">
+    IP Address /Host:<input type="text" name="ip_address">
     <input type="submit" name="submit" />
     </form>
 </body>
