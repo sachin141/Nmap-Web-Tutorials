@@ -1,0 +1,21 @@
+name: Security Scan
+
+on:
+  push:
+    branches:
+      - main  # Adjust to your branch name
+
+jobs:
+  security_scan:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check Out Code
+      uses: actions/checkout@v2
+
+    # Add steps to set up your environment and install Dastardly
+
+    - name: Run Dastardly Scan
+      run: dastardly scan
+
+    # Add steps to process the Dastardly results, send notifications, or take other actions.
